@@ -4,41 +4,130 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Phumza Sotyantya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Projects</h1>
+    <h1>My Projects</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
       <a href="skills.html">Skills</a>
-      <a href="projects.html" class="active">Projects</a>
       <a href="beyond.html">Beyond the Code</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Resume + Contact</a>
     </nav>
   </header>
 
   <main class="content-container">
     <h2>Featured Projects</h2>
+
     <div class="projects-grid">
-      <div class="card">
-        <h3>Project 1</h3>
-        <p>Standardized bootcamp project with live demo and documentation.</p>
+
+      <!-- Accessibility Tool -->
+      <div class="card fade-in">
+        <iframe src="https://www.youtube.com/embed/57-Mm3HstZc" frameborder="0" allowfullscreen></iframe>
+        <h3>Accessibility Tool</h3>
+        <p>AI solution designed to improve accessibility for users with disabilities.</p>
+        <p><strong>Tech:</strong> AI, Python</p>
+        <div class="links">
+          <a href="https://ai-accessebility-project-34.vercel.app/" target="_blank" rel="noopener noreferrer">Live App</a>
+          <a href="https://github.com/Lisekho3/ai-accessebility-project-34" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Project 2</h3>
-        <p>Standardized bootcamp project with live demo and documentation.</p>
+
+      <!-- Sentiment Dashboard -->
+      <div class="card fade-in">
+        <h3>Sentiment Dashboard</h3>
+        <p>Real-time sentiment analysis web app using Hugging Face Transformers and Streamlit.</p>
+        <p><strong>Tech:</strong> Python, Streamlit, Hugging Face</p>
+        <div class="links">
+          <a href="https://czk4haum5pvgxruigazj7r.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Project 3</h3>
-        <p>Standardized bootcamp project with live demo and documentation.</p>
+
+      <!-- COMPAS Bias Audit -->
+      <div class="card fade-in">
+        <h3>COMPAS Bias Audit</h3>
+        <p>Audit of criminal justice AI system COMPAS, exploring fairness and bias. Team Project: The Elements.</p>
+        <p><strong>Tech:</strong> Python, Google Colab</p>
+        <div class="links">
+          <a href="https://colab.research.google.com/drive/12kavZcnyFfFzFpaqmHIxGu-XEzRWDc-d?usp=sharing" target="_blank" rel="noopener noreferrer">Google Colab</a>
+        </div>
       </div>
+
+      <!-- Flashcard App -->
+      <div class="card fade-in">
+        <iframe src="https://www.youtube.com/embed/IFbqXimVjhA" frameborder="0" allowfullscreen></iframe>
+        <h3>Flashcard App</h3>
+        <p>Android app to create, view, and study flashcards using Java & SQLite.</p>
+        <div class="links">
+          <a href="https://github.com/Melinda-PS/FlashcardApp-BostonCity-SummativeProject" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Specific Sector AI Prototype -->
+      <div class="card fade-in">
+        <iframe src="https://www.youtube.com/embed/HfF3JSBga3k" frameborder="0" allowfullscreen></iframe>
+        <h3>Specific Sector AI Prototype</h3>
+        <p>Developed an AI prototype focused on the education sector. Team projec: The Elements.</p>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript, Python</p>
+      </div>
+
+      <!-- Image Content Generator -->
+      <div class="card fade-in">
+        <h3>Image Content Generator</h3>
+        <p>Developed an AI-powered image content generator using Gradio and Hugging Face Spaces.</p>
+        <p><strong>Tech:</strong> Python, Gradio, Hugging Face</p>
+        <div class="links">
+          <a href="https://huggingface.co/spaces/leo11000/content" target="_blank" rel="noopener noreferrer">Live Demo</a
+        </div>
+      </div>
+
+      <!-- PS Resume Maker -->
+      <div class="card fade-in">
+        <h3>PS Resume Maker</h3>
+        <p>AI-driven resume builder generating ATS-friendly CVs with smart templates.</p>
+        <div class="links">
+            </div>
+      </div>
+
+      <!-- AI Concept Chatbot -->
+      <div class="card fade-in">
+        <h3>AI Concept Chatbot</h3>
+        <p>Conversational chatbot built on Botpress for interactive learning.</p>
+        <div class="links">
+          <a href="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/17/03/20250517031541-XWVYDKY6.json" target="_blank" rel="noopener noreferrer">Try the Chatbot</a>
+        </div>
+      </div>
+
     </div>
   </main>
 
   <footer>
     © 2025 Phumza Sotyantya
   </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>
