@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Phumza Sotyantya Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phumza Sotyantya | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Welcome to My Portfolio</h1>
+    <h1>Phumza Sotyantya</h1>
+    <p>Systems Development Graduate | AI/ML Enthusiast | Python | Java | Hugging Face | Streamlit</p>
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="beyond.html">Beyond the Code</a>
-      <a href="contact.html">Resume + Contact</a>
+      <a href="#projects">Projects</a>
+      <a href="#ai-tools">AI Tools</a>
+      <a href="#videos">Demos</a>
+      <button id="theme-toggle">Toggle Mode</button>
     </nav>
   </header>
 
-  <main class="content-container">
-    <section class="home-intro">
-      <h2>Hello, I'm Phumza Sotyantya</h2>
-      <p>Welcome to my professional portfolio. Explore my skills, projects, and more.</p>
+  <main>
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Bias Audit</h3>
+          <p>Bias detection project using AI auditing tools.</p>
+          <a href="https://github.com/Phumzas/bias-audit-project" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="card">
+          <h3>Flashcard App</h3>
+          <p>Android app to create, view, and manage flashcards.</p>
+          <a href="https://github.com/Phumzas/FlashcardApp-BostonCity-SummativeProject" target="_blank">View on GitHub</a>
+          <a href="https://github.com/Phumzas/FlashcardApp-BostonCity-SummativeProject/raw/main/FlashcardApp.apk" download>Download APK</a>
+        </div>
+
+        <div class="card">
+          <h3>Visual Generator</h3>
+          <p>Transforms text prompts into high-quality images using diffusion models.</p>
+          <a href="https://github.com/Phumzas/VisualGenerator" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-tools">
+      <h2>AI Tools</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>AI Chatbot</h3>
+          <a href="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/17/03/20250517031541-XWVYDKY6.json" target="_blank">Launch Chatbot</a>
+        </div>
+
+        <div class="card">
+          <h3>Accessibility Tool</h3>
+          <a href="https://ai-accessebility-project-34.vercel.app/" target="_blank">Launch Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2>Project Demos</h2>
+      <ul>
+        <li><a href="https://youtube.com/shorts/IFbqXimVjhA?feature=shared" target="_blank">Flashcard App - Demo</a></li>
+        <li><a href="https://youtu.be/HfF3JSBga3k?si=9c62ZgDwi9AOGTyg" target="_blank">Sector Specific AI Prototype</a></li>
+        <li><a href="https://youtu.be/57-Mm3HstZc?si=al9O7DPQUJVBHG9z" target="_blank">Accessibility Tool Demo</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    © 2025 Phumza Sotyantya
+    <p>&copy; 2025 Phumza Sotyantya</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
